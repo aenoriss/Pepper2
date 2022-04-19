@@ -43,6 +43,13 @@
       renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+
+      <a-assets>
+        <a-assets-item
+          id="moto"
+          src="./caferacer.glb"
+        ></a-assets-item>
+      </a-assets>
       <!-- a-nft is the anchor that defines an Image Tracking entity -->
       <!-- on 'url' use the path to the Image Descriptors created before. -->
       <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
@@ -55,7 +62,7 @@
         smoothThreshold="5">
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
           <a-entity
-          gltf-model="./caferacer.glb"
+          gltf-model="#moto"
               scale="60 60 60"
               position="30 0 0"
               rotation="0 90 -90"
